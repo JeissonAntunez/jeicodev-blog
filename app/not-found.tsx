@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <section className="empty-state page-intro"><span className="kicker">404 · OTRO PUNTO DE PARTIDA</span><h1>Esta página no está disponible.</h1><p>Puede que el artículo todavía no se haya publicado.</p><Link className="button-dark" href="/blog">Explorar el blog ↗</Link></section>;}

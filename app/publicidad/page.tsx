@@ -1,0 +1,13 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import LegalPage from "@/components/LegalPage";
+export const metadata: Metadata = { title: "Publicidad y afiliación", robots: { index: false, follow: true }, alternates: { canonical: "/publicidad" } };
+export default function Page() {
+  return <LegalPage title="Publicidad y afiliación" intro="Los lectores deben poder distinguir una explicación editorial de un mensaje comercial." sections={[
+    { id: "estado", title: "1. Estado actual", content: <p>El blog dispone de espacios visuales reservados para publicidad, pero no carga anuncios de AdSense en su implementación actual. Tampoco se ha integrado un programa de afiliación. Un espacio reservado no implica una relación comercial con Google ni con una marca.</p> },
+    { id: "identificacion", title: "2. Identificación de contenido comercial", content: <><p>Si se publican anuncios, se distinguirán mediante el rótulo “Publicidad”. Las colaboraciones remuneradas o con contraprestación se identificarán junto al contenido, antes de que el lector interactúe con ellas.</p><p>Un enlace de afiliación deberá indicar que el blog puede recibir una comisión. No se afirmará que el precio para el lector permanece igual sin haber comprobado las condiciones de la oferta.</p></> },
+    { id: "independencia", title: "3. Criterio editorial", content: <p>Una colaboración no debe presentarse como una prueba independiente cuando no lo sea. Las recomendaciones explicarán sus fundamentos y los posibles conflictos de interés. No se inventarán experiencias, reseñas, resultados ni testimonios para favorecer una oferta.</p> },
+    { id: "clics", title: "4. Interacción con anuncios", content: <p>No se solicitarán clics para apoyar al blog ni se diseñarán elementos para provocar clics accidentales. Los anuncios deben mantenerse separados de botones de navegación, descarga y contenido editorial.</p> },
+    { id: "privacidad", title: "5. Privacidad antes de activar publicidad", content: <><p>Antes de incorporar AdSense u otra plataforma, se actualizarán la <Link href="/privacidad">política de privacidad</Link> y el <Link href="/cookies">inventario de cookies y almacenamiento</Link> con los proveedores y finalidades reales. También se configurarán los controles de consentimiento que correspondan.</p><p>Google exige información sobre el uso de cookies y otras tecnologías por sus proveedores publicitarios. Consulta su <a href="https://support.google.com/adsense/answer/1348695?hl=es">contenido obligatorio para políticas de privacidad</a>. Esta página por sí sola no activa anuncios ni garantiza la aprobación del sitio.</p></> },
+  ]}/>;
+}

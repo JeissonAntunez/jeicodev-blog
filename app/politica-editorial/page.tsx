@@ -1,0 +1,14 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import LegalPage, { LegalContact } from "@/components/LegalPage";
+export const metadata: Metadata = { title: "Política editorial", alternates: { canonical: "/politica-editorial" } };
+export default function Page() {
+  return <LegalPage title="Política editorial" intro="Publicamos para ayudar a comprender un tema y encontrar un siguiente paso útil. Estos son nuestros criterios de trabajo." draft={false} sections={[
+    { id: "fuentes", title: "1. Originalidad y fuentes", content: <p>Cada artículo debe aportar una explicación propia, contexto o un ejemplo útil. Las afirmaciones verificables se contrastan con fuentes identificables, preferentemente originales. Citar una fuente no autoriza a copiar íntegramente sus textos o imágenes. Los ejemplos hipotéticos deben distinguirse de los hechos.</p> },
+    { id: "autoria", title: "2. Autoría y fechas", content: <p>Las publicaciones muestran un nombre editorial o de autor y una fecha. No se atribuyen credenciales o experiencias que no puedan respaldarse. Un artículo explicativo no se presenta como una noticia de última hora. Los cambios sustanciales deben reflejarse en una nota de actualización cuando corresponda.</p> },
+    { id: "ia", title: "3. Inteligencia artificial y automatización", content: <p>Podemos utilizar herramientas de IA como apoyo para estructurar borradores o crear ilustraciones. Cuando su intervención sea relevante, se indicará en el contenido o en el pie de imagen. La IA no se considera una fuente ni una experiencia personal. La automatización no sustituye la comprobación de datos, permisos y enlaces antes de publicar.</p> },
+    { id: "correcciones", title: "4. Correcciones y reclamaciones", content: <><p>Si identificas un error, escribe a <LegalContact/> con la URL, el fragmento y, si dispones de ella, una fuente que permita contrastarlo. Las correcciones sustanciales deben explicarse en el artículo; las de estilo pueden realizarse sin alterar su significado.</p><p>Para reclamaciones sobre materiales de terceros, indica el recurso afectado y la relación con los derechos invocados. Se revisará la solicitud sin exigir datos personales innecesarios.</p></> },
+    { id: "comercial", title: "5. Independencia y transparencia", content: <p>Las colaboraciones y los enlaces de afiliación se identificarán según la <Link href="/publicidad">política de publicidad</Link>. Los intereses comerciales no deben ocultarse ni presentarse como opiniones independientes.</p> },
+    { id: "demos", title: "6. Contenido de demostración", content: <p>Los artículos marcados como demo ilustran el diseño, no acreditan experiencias del titular y se excluyen de producción por defecto. Antes de publicar cualquier ejemplo como contenido definitivo deben revisarse su utilidad, autoría y exactitud.</p> },
+  ]}/>;
+}

@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { site } from "@/lib/site";
+export const metadata:Metadata={title:"Contacto"};
+export default function Page(){return <article className="prose legal-page"><span className="kicker">CONVERSEMOS</span><h1>Las buenas ideas también llegan de fuera.</h1><p>Preguntas, propuestas y correcciones ayudan a que este blog sea más útil.</p>{site.email?<p>Escribe a <a href={`mailto:${site.email}`}>{site.email}</a>.</p>:<p>El canal de contacto está en preparación. Estará disponible antes del lanzamiento público.</p>}<h2>¿Encontraste un error?</h2><p>Incluye el enlace del artículo, el fragmento que debemos revisar y, si puedes, una fuente que nos ayude a contrastarlo.</p><h2>Colaboraciones</h2><p>Las propuestas comerciales deben ser relevantes para los lectores y se identificarán claramente si llegan a publicarse.</p></article>;}
