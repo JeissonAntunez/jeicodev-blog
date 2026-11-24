@@ -8,8 +8,8 @@ function getSiteUrl() {
 const url = getSiteUrl();
 export const isPublicSite = Boolean(configuredUrl) && url.startsWith("https://") && !["localhost", "127.0.0.1", "[::1]"].includes(new URL(url).hostname) && process.env.SHOW_DEMO_CONTENT !== "true";
 export const site = {
-  name: "JeicoDev",
-  description: "El espacio de JeicoDev sobre sistemas, desarrollo y automatización. Artículos, proyectos y aprendizajes para construir con tecnología.",
+  name: "Jeisson.JSON",
+  description: "El espacio de Jeisson.JSON sobre sistemas, desarrollo y automatización. Artículos, proyectos y aprendizajes para construir con tecnología.",
   url,
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
 };
