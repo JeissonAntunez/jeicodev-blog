@@ -41,6 +41,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
       </head>
       <body>
+        
         <a className="skip-link" href="#contenido">
           Saltar al contenido
         </a>

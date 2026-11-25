@@ -4,10 +4,11 @@
 :root {
   --ink: #252b28;
   --muted: #6d726c;
-  --paper: #faf9f6;
+  --paper: #DFDED9;
   --green: #326a47;
-  --line: #e3e5dd;
+  --line: #326A47;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -49,7 +50,7 @@ a:hover {
   padding-bottom: 70px;
 }
 .site-header {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px outset var(--line);
   background: var(--paper);
 }
 .header-inner {
@@ -57,7 +58,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 96px;
+  min-height:136px;
 }
 .brand {
   font-size: 24px;
@@ -67,6 +68,17 @@ a:hover {
   align-items: center;
   white-space: nowrap;
 }
+.brand img {
+  background-color: transparent;
+  mix-blend-mode: multiply; /* modo claro: oculta el fondo blanco */
+  transition: filter 0.2s ease;
+}
+
+:root[data-theme="dark"] .brand img {
+  filter: invert(1);       /* fondo blanco → negro, logo oscuro → claro */
+  mix-blend-mode: screen;  /* el negro se funde con tu fondo oscuro */
+}
+
 .brand-dot {
   color: var(--green);
 }
@@ -611,6 +623,8 @@ a:hover {
   top: 30px;
   left: -170px;
 }
+
+
 .track-two {
   width: 430px;
   height: 200px;
